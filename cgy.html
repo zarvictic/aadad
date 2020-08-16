@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>zarvictic</title>
+</head>
+<body>
+    <h1>zarvictic</h1>
+<form action="room.php" method="POST">
+<h2>login</h2>
+<h4>name</h4>
+<input type="text" placeholder="name" required name="zplom" />
+<br>
+<br>
+<h4>email</h4>
+<input type="email" placeholder="email" required name="cok"/>
+<br>
+<br>
+<h4>password</h4>
+<input type="password" placeholder="password" required name="save"/>
+<br>
+<br>
+<button type="submit" name="xplj">login</button>
+<?php
+$host = "localhost";
+$user = "id14612155_kyros";
+$pass = "l+_5F-=ui1*8uGpu";
+$db = "id14612155_cvz";
+
+$abc=mysqli_connect($host,$user,$pass,$db);
+$zozo=$_POST['zplom']
+$bomk=$_POST['cok']
+$vnlo=$_POST['save']
+$look=$_POST['xplj']
+if(isset($look)){
+    $query='INSERT INTO go(name,email,password)VALUES('$zozo','$bomk','$vnlo')';
+    mysqli_query($abc,$query);
+}
+?>
+</form>
+</body>
+</html>
